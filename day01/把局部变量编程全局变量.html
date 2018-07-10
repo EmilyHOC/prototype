@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            // (function (形参) {
+            //         var num=10;
+            //         console.log("哈哈");
+            //     }
+            //
+            // )(实参);
+            // console.log(num);报错
+
+            (function (win) {
+                var num=10;//局部变量
+                win.number=num;
+            })(window);
+            console.log(number);
+            <!--把局部变量给window就可以了-->
+        </script>
+
+</body>
+</html>

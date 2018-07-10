@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂模式创建对象</title>
+</head>
+<body>
+        <script>
+            function createObject(name,age) {
+                var obj=new Object();
+                obj.name=name;
+                obj.age=age;
+                obj.sayHi=function () {
+                    console.log("你好");
+                };
+                return obj;
+            }
+            var per1=createObject("晓明",20);
+        </script>
+
+<!--自定义函数和工厂模式创建对象的区别
+
+共同点:
+            1)都是函数,都可以创建对象,传入参数
+
+ 不同点:     工厂模式:
+            1)函数名是小写,有new,有返回值
+            2)new之后的对象是当前对象
+            自定义函数:
+            --
+            1)没有new,函数名是大写,没有返回值
+            2)this是当前对象>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>共享数据</title>
+</head>
+<body>
+        <!--属性和方法需要共享,不需要共享的写构造函数中-->
+        <script>
+            <!--构造函数-->
+            function Student(name,age,sex) {
+                this.name=name;
+                this.age=age;
+                this.sex=sex;
+            }
+            //所有人的身高都是188,所有人的体重都是55
+            Student.prototype.height=188;
+            Student.prototype.weight=55;
+            var p1=new Student("王明",15,"女");
+
+            console.log(p1);
+        </script>
+        <!--简单的原型语法-->
+        <script>
+            <!--构造函数-->
+            function Student2(name,age,sex) {
+                this.name=name;
+                this.age=age;
+                this.sex=sex;
+            }
+            Student2.prototype={
+                height:"188",
+                weight:"55kg"
+            }
+            <!--实例对象的方法是可以相互调用的-->
+        </script>
+
+</body>
+</html>
